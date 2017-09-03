@@ -6,18 +6,43 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne = {
-    title: 'article-one| bhavik moradiya',
-    heading:'article-one',
-    date:' Aug 23,2017',
-    content:`
-            <p>
-                hello! this is bhavik moradiya and this is my first webpage, if you have any suggestions, please share it with us for better experience.
-            </p>
-            <p>
-                 this page deals explicitly with the innovative and creative ideas about how people look at things.
-            </p>`
-};
+var articles = {
+        `article-one`: {
+            title: 'article-one| bhavik moradiya',
+            heading:'article-one',
+            date:' Aug 23,2017',
+            content:`
+                    <p>
+                        hello! this is bhavik moradiya and this is my first webpage, if you have any suggestions, please share it with us for better experience.
+                    </p>
+                    <p>
+                         this page deals explicitly with the innovative and creative ideas about how people look at things.
+                    </p>`
+        },
+        `article-two`: {
+            title: 'article-two| bhavik moradiya',
+            heading:'article-two',
+            date:' Aug 25,2017',
+            content:`
+                    <p>
+                        hello! this is bhavik moradiya and this is my first webpage, if you have any suggestions, please share it with us for better experience.
+                    </p>
+                    <p>
+                         this page deals explicitly with the innovative and creative ideas about how people look at things.
+                    </p>`
+        },
+        `article-three`: {
+            title: 'article-three| bhavik moradiya',
+            heading:'article-three',
+            date:' Aug 27,2017',
+            content:`
+                    <p>
+                        hello! this is bhavik moradiya and this is my first webpage, if you have any suggestions, please share it with us for better experience.
+                    </p>
+                    <p>
+                         this page deals explicitly with the innovative and creative ideas about how people look at things.
+                    </p>`
+        };
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
@@ -58,15 +83,13 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-    res.send(createTemplate(articleOne));
+app.get('/articleName', function (req, res) {
+    //articleName == article-one
+    //articles[aarticleName] == {} content object for article one
+    var articleName == req,parans.articleName;
+    res.send(createTemplate(articles[articleName]));
 });  
-app.get('/article-two', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-app.get('/article-three', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});    
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
