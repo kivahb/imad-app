@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles = {
-        `article-one`: {
+        'article-one': {
             title: 'article-one| bhavik moradiya',
             heading:'article-one',
             date:' Aug 23,2017',
@@ -19,7 +19,7 @@ var articles = {
                          this page deals explicitly with the innovative and creative ideas about how people look at things.
                     </p>`
         },
-        `article-two`: {
+        'article-two': {
             title: 'article-two| bhavik moradiya',
             heading:'article-two',
             date:' Aug 25,2017',
@@ -31,7 +31,7 @@ var articles = {
                          this page deals explicitly with the innovative and creative ideas about how people look at things.
                     </p>`
         },
-        `article-three`: {
+        'article-three': {
             title: 'article-three| bhavik moradiya',
             heading:'article-three',
             date:' Aug 27,2017',
