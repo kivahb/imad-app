@@ -5,13 +5,62 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleOne = {
+    title: 'article-one| bhavik moradiya',
+    heading:'article-one',
+    date:' Aug 23,2017',
+    content:`
+            <p>
+                hello! this is bhavik moradiya and this is my first webpage, if you have any suggestions, please share it with us for better experience.
+            </p>
+            <p>
+                 this page deals explicitly with the innovative and creative ideas about how people look at things.
+            </p>`
+};
+function createTemplate (data) {
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+    var htmltemplate =`
+    <html>
+        <head>
+            <title>
+                ${title}
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link href="/ui/style.css" rel="stylesheet" />
+            
+        </head>
+        <body>
+            <div class="container">
+              <div>
+                 <a href="/">home</a>
+              </div>
+              <hr/>
+              <h3>
+                 ${heading}
+              </h3>
+              <div>
+                ${date}
+              </div>
+              <div>
+                 ${content}
+              </div>
+            </div>
+        </body>
+    </html>
+    `;
+    return htmltemplate;
+}        
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-});
+    res.sendFile(createtemplate(articleOne));
+    
 app.get('/article-two', function (req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
