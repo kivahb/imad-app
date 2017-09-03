@@ -25,7 +25,7 @@ var articles = {
             date:' Aug 25,2017',
             content:`
                     <p>
-                        hello! this is bhavik moradiya and this is my first webpage, if you have any suggestions, please share it with us for better experience.
+                        hello! this is bhavik moradiya and this is my second webpage, if you have any suggestions, please share it with us for better experience.
                     </p>
                     <p>
                          this page deals explicitly with the innovative and creative ideas about how people look at things.
@@ -37,7 +37,7 @@ var articles = {
             date:' Aug 27,2017',
             content:`
                     <p>
-                        hello! this is bhavik moradiya and this is my first webpage, if you have any suggestions, please share it with us for better experience.
+                        hello! this is bhavik moradiya and this is my third webpage, if you have any suggestions, please share it with us for better experience.
                     </p>
                     <p>
                          this page deals explicitly with the innovative and creative ideas about how people look at things.
