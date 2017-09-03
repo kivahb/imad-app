@@ -42,7 +42,8 @@ var articles = {
                     <p>
                          this page deals explicitly with the innovative and creative ideas about how people look at things.
                     </p>`
-        };
+        },
+};
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
