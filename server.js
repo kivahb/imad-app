@@ -50,6 +50,7 @@ var articles = {
     var heading = data.heading;
     var content = data.content;
     var htmltemplate =`
+    <!DOCTYPE html>
     <html>
         <head>
             <title>
